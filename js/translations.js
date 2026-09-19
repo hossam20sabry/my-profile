@@ -28,6 +28,15 @@ window.translations = {
       talk: "تواصل معي",
       langSwitch: "EN"
     },
+    mobile: {
+      services: "01 // الخدمات",
+      whyMe: "02 // لماذا أعمل مع حسام؟",
+      scalability: "03 // قابلية التوسع والنمو",
+      approach: "04 // خطوات العمل الـ 4",
+      questions: "05 // هل تحتاج إلى...",
+      about: "06 // نبذة عن حسام",
+      contact: "07 // تواصل لبدء مشروعك"
+    },
     hero: {
       badge: "مطور مواقع وأنظمة ويب متكاملة",
       subBadge: "أنظمة ويب مصممة لنمو الأعمال",
@@ -392,6 +401,15 @@ window.translations = {
       contact: "CONTACT",
       talk: "LET'S TALK",
       langSwitch: "عربي"
+    },
+    mobile: {
+      services: "01 // SERVICES",
+      whyMe: "02 // WHY WORK WITH ME",
+      scalability: "03 // TRAFFIC & SCALABILITY",
+      approach: "04 // 4-STEP APPROACH",
+      questions: "05 // DO YOU NEED...",
+      about: "06 // ABOUT HOSSAM",
+      contact: "07 // CONTACT & INQUIRY"
     },
     hero: {
       badge: "FULL-STACK WEB DEVELOPER",

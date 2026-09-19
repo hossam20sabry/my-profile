@@ -275,7 +275,9 @@ document.addEventListener('DOMContentLoaded', () => {
     drawerClose.addEventListener('click', closeDrawer);
   }
 
-  mobileNavLinks.forEach(link => {
+  // Close drawer on clicking ANY link inside it (nav links and the bottom CTA button)
+  const allDrawerLinks = mobileDrawer?.querySelectorAll('a');
+  allDrawerLinks?.forEach(link => {
     link.addEventListener('click', () => {
       closeDrawer();
     });
