@@ -967,16 +967,22 @@
               <h3 class="form-title" data-i18n="contact.formTitle">ابدأ محادثة حول مشروعك</h3>
               <p class="form-desc" data-i18n="contact.formDesc">شاركني ملخصاً سريعاً لما ترغب في بنائه. سأقوم بدراسته والرد عليك بخطوات عمل واضحة.</p>
 
-              <form id="project-inquiry-form" class="brutalist-form" novalidate>
+              <form id="project-inquiry-form" class="brutalist-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                <!-- Web3Forms Integration -->
+                <input type="hidden" name="access_key" value="c581c5d5-0c22-4101-bf2b-fd6ce23cd5b9">
+                <input type="hidden" name="subject" value="طلب مشروع جديد من الموقع — حسام صبري">
+                <input type="hidden" name="from_name" value="Hossam Sabry Portfolio">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                 <div class="form-group">
                   <label for="client-name" class="form-label" data-i18n="contact.nameLabel">اسمك أو اسم شركتك *</label>
-                  <input type="text" id="client-name" name="client_name" class="form-input" placeholder="مثال: عبد الله السعدي / شركة الأفق للخدمات" required>
+                  <input type="text" id="client-name" name="name" class="form-input" placeholder="مثال: عبد الله السعدي / شركة الأفق للخدمات" required>
                   <span class="form-error" id="name-error" data-i18n="contact.errors.name">يرجى كتابة اسمك أو اسم شركتك.</span>
                 </div>
 
                 <div class="form-group">
                   <label for="client-email" class="form-label" data-i18n="contact.emailFieldLabel">بريدك الإلكتروني *</label>
-                  <input type="email" id="client-email" name="client_email" class="form-input" placeholder="مثال: abdullah@example.com" required>
+                  <input type="email" id="client-email" name="email" class="form-input" placeholder="مثال: abdullah@example.com" required>
                   <span class="form-error" id="email-error" data-i18n="contact.errors.email">يرجى كتابة بريد إلكتروني صحيح حتى أتمكن من الرد عليك.</span>
                 </div>
 
@@ -1006,7 +1012,7 @@
 
                 <div class="form-group">
                   <label for="project-details" class="form-label" data-i18n="contact.detailsLabel">أخبرني بالمزيد عن مشروعك *</label>
-                  <textarea id="project-details" name="project_details" rows="4" class="form-textarea" placeholder="ما طبيعة نشاطك التجاري؟ ما المشاكل التي تبحث عن حل لها؟ أو ما هي المزايا والوظائف المحددة التي تحتاجها في النظام؟" required></textarea>
+                  <textarea id="project-details" name="message" rows="4" class="form-textarea" placeholder="ما طبيعة نشاطك التجاري؟ ما المشاكل التي تبحث عن حل لها؟ أو ما هي المزايا والوظائف المحددة التي تحتاجها في النظام؟" required></textarea>
                   <span class="form-error" id="details-error" data-i18n="contact.errors.details">يرجى كتابة نبذة مختصرة عن متطلبات المشروع.</span>
                 </div>
 

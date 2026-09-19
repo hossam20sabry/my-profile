@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       clearErrors();
 
@@ -421,27 +421,87 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Successful client-side interaction
-      const clientName = nameInput.value.trim();
-      const projectTypeSelect = document.getElementById('project-type');
-      const projectType = projectTypeSelect ? projectTypeSelect.options[projectTypeSelect.selectedIndex]?.text : 'Project';
+      const submitBtn = document.getElementById('submit-btn');
+      const submitBtnSpan = submitBtn?.querySelector('span[data-i18n="contact.submitBtn"]') || submitBtn?.querySelector('span:first-child');
+      const originalBtnText = submitBtnSpan ? submitBtnSpan.textContent : '';
 
-      if (formFeedback) {
-        formFeedback.className = 'form-feedback success';
-        let successHtml = t.success.body
-          .replace('{name}', clientName)
-          .replace('{type}', projectType)
-          .replace('{nameEncoded}', encodeURIComponent(clientName))
-          .replace('{detailsEncoded}', encodeURIComponent(detailsInput.value.trim()));
-
-        formFeedback.innerHTML = `
-          <strong>${t.success.title}</strong><br>
-          ${successHtml}
-        `;
+      // Set Loading State
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+        if (submitBtnSpan) {
+          submitBtnSpan.textContent = t.submittingBtn || (currentLang === 'ar' ? 'جاري الإرسال...' : 'SENDING...');
+        }
       }
 
-      // Reset fields
-      form.reset();
+      const clientName = nameInput.value.trim();
+      const clientEmail = emailInput.value.trim();
+      const projectTypeSelect = document.getElementById('project-type');
+      const projectType = projectTypeSelect && projectTypeSelect.selectedIndex > 0 
+        ? projectTypeSelect.options[projectTypeSelect.selectedIndex].text 
+        : (currentLang === 'ar' ? 'مشروع غير محدد' : 'General Inquiry');
+      const projectTimelineSelect = document.getElementById('project-timeline');
+      const projectTimeline = projectTimelineSelect ? projectTimelineSelect.options[projectTimelineSelect.selectedIndex]?.text : '';
+      const messageDetails = detailsInput.value.trim();
+
+      try {
+        const payload = {
+          access_key: 'c581c5d5-0c22-4101-bf2b-fd6ce23cd5b9',
+          name: clientName,
+          email: clientEmail,
+          subject: `طلب مشروع جديد من الموقع: ${clientName} (${projectType})`,
+          from_name: 'Hossam Sabry Website',
+          'نوع المشروع': projectType,
+          'الوقت المقترح': projectTimeline,
+          'تفاصيل المشروع': messageDetails
+        };
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (response.status === 200 && result.success) {
+          if (formFeedback) {
+            formFeedback.className = 'form-feedback success';
+            let successHtml = t.success.body
+              .replace('{name}', clientName)
+              .replace('{type}', projectType)
+              .replace('{email}', clientEmail);
+
+            formFeedback.innerHTML = `
+              <strong>${t.success.title}</strong><br>
+              ${successHtml}
+            `;
+            formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          form.reset();
+        } else {
+          throw new Error(result.message || 'Submission failed');
+        }
+      } catch (err) {
+        console.error('Web3Forms Error:', err);
+        if (formFeedback) {
+          formFeedback.className = 'form-feedback error';
+          formFeedback.textContent = t.errors.serverError || (currentLang === 'ar'
+            ? 'حدث خطأ أثناء الإرسال. يمكنك مراسلتي مباشرة عبر البريد hossamsapry006@gmail.com أو عبر واتساب.'
+            : 'An error occurred while sending. Please contact me directly at hossamsapry006@gmail.com or via WhatsApp.');
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '';
+          if (submitBtnSpan && originalBtnText) {
+            submitBtnSpan.textContent = originalBtnText;
+          }
+        }
+      }
     });
   }
 });

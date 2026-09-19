@@ -358,15 +358,17 @@ window.translations = {
       detailsLabel: "أخبرني بالمزيد عن مشروعك *",
       detailsPlaceholder: "ما طبيعة نشاطك التجاري؟ ما المشاكل التي تبحث عن حل لها؟ أو ما هي المزايا والوظائف المحددة التي تحتاجها في النظام؟",
       submitBtn: "إرسال تفاصيل المشروع",
+      submittingBtn: "جاري الإرسال...",
       errors: {
         name: "يرجى كتابة اسمك أو اسم شركتك.",
         email: "يرجى كتابة بريد إلكتروني صحيح حتى أتمكن من الرد عليك.",
         details: "يرجى كتابة نبذة مختصرة عن متطلبات المشروع.",
-        general: "يرجى تعبئة الحقول الإلزامية المحددة باللون الأحمر."
+        general: "يرجى تعبئة الحقول الإلزامية المحددة باللون الأحمر.",
+        serverError: "حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى أو التواصل مباشرة عبر البريد hossamsapry006@gmail.com أو واتساب."
       },
       success: {
-        title: "تم تجهيز تفاصيل طلبك بنجاح!",
-        body: "شكراً لك <strong>{name}</strong>. تم إعداد طلبك بخصوص «<em>{type}</em>».<br><br>لبدء التواصل فوراً، يمكنك إرسال الطلب مباشرة إلى <a href=\"mailto:hossamsapry006@gmail.com?subject=طلب%20مشروع%20من%20{nameEncoded}&body={detailsEncoded}\" style=\"text-decoration:underline; font-weight:800;\">hossamsapry006@gmail.com</a> أو الضغط على زر محادثة عبر واتساب."
+        title: "تم إرسال طلبك بنجاح! 🚀",
+        body: "شكراً لك <strong>{name}</strong>. تم استلام تفاصيل مشروعك بخصوص «<em>{type}</em>» بنجاح في بريدي الإلكتروني.<br><br>سأقوم بمراجعة متطلباتك والرد عليك عبر بريدك (<strong>{email}</strong>) خلال أقل من 24 ساعة بخطة عمل واضحة."
       }
     },
     footer: {
@@ -732,15 +734,17 @@ window.translations = {
       detailsLabel: "TELL ME ABOUT YOUR PROJECT *",
       detailsPlaceholder: "What does your business do, what problems are you looking to solve, or what specific features do you need?",
       submitBtn: "SEND INQUIRY",
+      submittingBtn: "SENDING...",
       errors: {
         name: "Please provide your name or business name.",
         email: "Please provide a valid email address so I can reply.",
         details: "Please write a brief summary of your project.",
-        general: "Please fill out all required fields marked in red."
+        general: "Please fill out all required fields marked in red.",
+        serverError: "An error occurred while sending. Please try again or reach out directly to hossamsapry006@gmail.com or via WhatsApp."
       },
       success: {
-        title: "INQUIRY PREPARED!",
-        body: "Thank you, <strong>{name}</strong>. Your request for \"<em>{type}</em>\" is ready.<br><br>To connect instantly, please send this directly to <a href=\"mailto:hossamsapry006@gmail.com?subject=Project%20Inquiry%20from%20{nameEncoded}&body={detailsEncoded}\" style=\"text-decoration:underline; font-weight:800;\">hossamsapry006@gmail.com</a> or click Chat on WhatsApp."
+        title: "INQUIRY SENT SUCCESSFULLY! 🚀",
+        body: "Thank you, <strong>{name}</strong>! Your project details for \"<em>{type}</em>\" have been delivered directly to my inbox.<br><br>I will review your requirements and get back to you at (<strong>{email}</strong>) within 24 hours with clear next steps."
       }
     },
     footer: {
