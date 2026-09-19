@@ -316,7 +316,7 @@ window.translations = {
       channelsTitle: "قنوات التواصل المباشرة",
       channelsDesc: "تفضل بالتواصل عبر الطريقة الأنسب لك. الروابط المباشرة جاهزة لتبدأ المحادثة فوراً.",
       emailLabel: "البريد الإلكتروني",
-      emailVal: "your-email@example.com",
+      emailVal: "hossamsapry006@gmail.com",
       copyBtn: "نسخ",
       copiedBtn: "تم النسخ!",
       sendBtn: "إرسال ↖",
@@ -366,7 +366,7 @@ window.translations = {
       },
       success: {
         title: "تم تجهيز تفاصيل طلبك بنجاح!",
-        body: "شكراً لك <strong>{name}</strong>. تم إعداد طلبك بخصوص «<em>{type}</em>».<br><br>لبدء التواصل فوراً، يمكنك إرسال الطلب مباشرة إلى <a href=\"mailto:your-email@example.com?subject=طلب%20مشروع%20من%20{nameEncoded}&body={detailsEncoded}\" style=\"text-decoration:underline; font-weight:800;\">your-email@example.com</a> أو الضغط على زر محادثة عبر واتساب."
+        body: "شكراً لك <strong>{name}</strong>. تم إعداد طلبك بخصوص «<em>{type}</em>».<br><br>لبدء التواصل فوراً، يمكنك إرسال الطلب مباشرة إلى <a href=\"mailto:hossamsapry006@gmail.com?subject=طلب%20مشروع%20من%20{nameEncoded}&body={detailsEncoded}\" style=\"text-decoration:underline; font-weight:800;\">hossamsapry006@gmail.com</a> أو الضغط على زر محادثة عبر واتساب."
       }
     },
     footer: {
@@ -690,7 +690,7 @@ window.translations = {
       channelsTitle: "DIRECT CHANNELS",
       channelsDesc: "Feel free to reach out via your preferred method. Direct contact placeholders are ready for instant connection.",
       emailLabel: "EMAIL",
-      emailVal: "your-email@example.com",
+      emailVal: "hossamsapry006@gmail.com",
       copyBtn: "COPY",
       copiedBtn: "COPIED!",
       sendBtn: "SEND ↗",
@@ -740,7 +740,7 @@ window.translations = {
       },
       success: {
         title: "INQUIRY PREPARED!",
-        body: "Thank you, <strong>{name}</strong>. Your request for \"<em>{type}</em>\" is ready.<br><br>To connect instantly, please send this directly to <a href=\"mailto:your-email@example.com?subject=Project%20Inquiry%20from%20{nameEncoded}&body={detailsEncoded}\" style=\"text-decoration:underline; font-weight:800;\">your-email@example.com</a> or click Chat on WhatsApp."
+        body: "Thank you, <strong>{name}</strong>. Your request for \"<em>{type}</em>\" is ready.<br><br>To connect instantly, please send this directly to <a href=\"mailto:hossamsapry006@gmail.com?subject=Project%20Inquiry%20from%20{nameEncoded}&body={detailsEncoded}\" style=\"text-decoration:underline; font-weight:800;\">hossamsapry006@gmail.com</a> or click Chat on WhatsApp."
       }
     },
     footer: {
