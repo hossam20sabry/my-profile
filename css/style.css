@@ -61,6 +61,10 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + var(--topbar-height) + 16px);
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -70,8 +74,22 @@ body {
   line-height: 1.6;
   font-size: 1.05rem;
   overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
   position: relative;
   -webkit-font-smoothing: antialiased;
+}
+
+#main-content,
+.section,
+.site-header,
+.site-footer,
+.top-status-bar,
+.marquee-strip {
+  max-width: 100%;
+  overflow-x: clip;
+  box-sizing: border-box;
 }
 
 /* Subtle architectural grid pattern background */
@@ -531,12 +549,16 @@ button, input, select, textarea {
   display: flex;
   flex-direction: column;
   box-shadow: -10px 0 0 rgba(13, 14, 17, 0.4);
-  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
   padding: 24px;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .mobile-drawer.open {
   right: 0;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .drawer-backdrop {
@@ -1881,6 +1903,10 @@ button, input, select, textarea {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
+  gap: 14px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  max-width: 100%;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
@@ -1893,6 +1919,8 @@ button, input, select, textarea {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .channel-type {
@@ -1908,12 +1936,15 @@ button, input, select, textarea {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--color-black);
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .channel-actions {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .availability-card {
@@ -2211,16 +2242,31 @@ button, input, select, textarea {
   .footer-contact-col {
     grid-column: span 2;
   }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 
-/* Tablet & Mobile / 768px */
+/* Tablet & Mobile / 768px & below (iPhone 16 Pro Max, iPhone 17, standard smartphones) */
 @media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
   .section {
-    padding: 70px 0;
+    padding: 56px 0;
   }
 
   .top-status-bar {
     font-size: 0.72rem;
+    width: 100%;
+    overflow: hidden;
   }
 
   .top-status-content .status-meta,
@@ -2232,7 +2278,11 @@ button, input, select, textarea {
     display: none;
   }
 
-  .header-actions .btn-sm {
+  .brand-role {
+    display: none;
+  }
+
+  .header-actions .header-cta {
     display: none;
   }
 
@@ -2240,9 +2290,89 @@ button, input, select, textarea {
     display: flex;
   }
 
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.45rem, 5.2vw, 2.1rem);
+    line-height: 1.25;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .contact-headline {
+    font-size: clamp(1.45rem, 5.2vw, 2.1rem);
+    line-height: 1.25;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .headline-highlight,
+  .contact-highlight {
+    display: inline-block;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    padding: 3px 8px;
+    box-shadow: 3px 3px 0px var(--color-black);
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
   .hero-pillars-strip {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .hero-media-wrapper {
+    padding: 10px 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brutalist-card-frame {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 4px 4px 0px var(--color-black);
+  }
+
+  .brutalist-sticker,
+  html[dir="rtl"] .brutalist-sticker {
+    position: static !important;
+    transform: none !important;
+    margin-top: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    right: auto !important;
+    left: auto !important;
+  }
+
+  .frame-shadow-accent,
+  html[dir="rtl"] .frame-shadow-accent {
+    top: 4px !important;
+    right: 4px !important;
+    left: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  html[dir="ltr"] .frame-shadow-accent {
+    top: 4px !important;
+    left: 4px !important;
+    right: auto !important;
   }
 
   .questions-grid {
@@ -2264,7 +2394,7 @@ button, input, select, textarea {
   .scalability-conclusion {
     flex-direction: column;
     align-items: flex-start;
-    padding: 24px;
+    padding: 20px 16px;
   }
 
   .projects-grid {
@@ -2281,6 +2411,51 @@ button, input, select, textarea {
 
   .contact-layout {
     grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Robust, non-overflowing channel cards on all mobile devices */
+  .channel-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 16px 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .channel-info {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .channel-value {
+    font-family: var(--font-mono);
+    font-size: clamp(0.8rem, 3.5vw, 0.92rem);
+    font-weight: 700;
+    color: var(--color-black);
+    word-break: break-all;
+    overflow-wrap: anywhere;
+  }
+
+  .channel-actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+  }
+
+  .channel-actions .btn {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 6px;
+    font-size: 0.82rem;
+    box-sizing: border-box;
   }
 
   .scalability-box,
@@ -2288,7 +2463,20 @@ button, input, select, textarea {
   .contact-box,
   .why-banner-box,
   .tech-box {
-    padding: 32px 20px;
+    padding: 24px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 0px var(--color-black);
+  }
+
+  .contact-form-wrapper {
+    padding: 24px 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tech-tags-grid {
+    grid-template-columns: 1fr;
   }
 
   .footer-grid {
@@ -2307,66 +2495,15 @@ button, input, select, textarea {
   }
 }
 
-/* Small Smartphone / 430px & below */
-@media (max-width: 430px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .hero-headline {
-    font-size: 2.2rem;
-  }
-
-  .headline-highlight {
-    padding: 2px 8px;
-  }
-
-  .hero-cta-group {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero-cta-group .btn {
-    width: 100%;
-  }
-
-  .brutalist-sticker {
-    position: static;
-    transform: none;
-    margin-top: 14px;
-    width: 100%;
-  }
-
-  .channel-card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .channel-actions {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .tech-tags-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Ultra Small Screens / 320px */
 @media (max-width: 320px) {
   .hero-headline {
-    font-size: 1.95rem;
+    font-size: 1.6rem;
   }
 
   .btn {
-    padding: 12px 18px;
-    font-size: 0.88rem;
-  }
-
-  .brand-role {
-    display: none;
+    padding: 10px 12px;
+    font-size: 0.8rem;
   }
 }
 
@@ -2452,29 +2589,33 @@ html[dir="rtl"] .mobile-drawer {
   border-left: none;
   border-right: var(--border-ultra);
   box-shadow: 10px 0 0 rgba(13, 14, 17, 0.4);
-  transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
 }
 
 html[dir="rtl"] .mobile-drawer.open {
   left: 0;
   right: auto;
+  visibility: visible;
+  pointer-events: auto;
 }
 
-/* Floating sticker orientation in RTL */
-html[dir="rtl"] .brutalist-sticker {
-  left: auto;
-  right: -20px;
-  transform: rotate(4deg);
-}
+/* Floating sticker and accent shadow orientation in RTL (Desktop only) */
+@media (min-width: 769px) {
+  html[dir="rtl"] .brutalist-sticker {
+    left: auto;
+    right: -20px;
+    transform: rotate(4deg);
+  }
 
-html[dir="rtl"] .brutalist-sticker:hover {
-  transform: rotate(0deg) scale(1.05);
-}
+  html[dir="rtl"] .brutalist-sticker:hover {
+    transform: rotate(0deg) scale(1.05);
+  }
 
-/* Background photo shadow offset in RTL */
-html[dir="rtl"] .frame-shadow-accent {
-  left: auto;
-  right: 14px;
+  /* Background photo shadow offset in RTL */
+  html[dir="rtl"] .frame-shadow-accent {
+    left: auto;
+    right: 14px;
+  }
 }
 
 /* Footer links hover transition in RTL */
