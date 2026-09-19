@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حسام صبري — مطور مواقع وأنظمة ويب متكاملة | مواقع احترافية وأنظمة مخصصة للشركات</title>
+  <meta name="description" content="أقوم ببناء مواقع احترافية وأنظمة ويب مخصصة للشركات والمشاريع التي تبحث عما هو أكثر من مجرد شكل جميل — أنظمة تعمل بسلاسة، تظهر بأعلى كفاءة على كل الشاشات، وجاهزة للنمو مع توسع عملك.">
+  <meta name="keywords" content="مطور ويب, Full-Stack Developer, برمجة مواقع, أنظمة ويب مخصصة, لوحات تحكم, متاجر إلكترونية, حسام صبري, Hossam Sabry">
+  <meta name="author" content="Hossam Sabry">
+  <meta name="theme-color" content="#FFDE00">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="حسام صبري — مطور مواقع وأنظمة ويب متكاملة">
+  <meta property="og:description" content="أبني مواقع وتطبيقات ويب مخصصة تساعد الشركات على العمل بكفاءة وخدمة المزيد من العملاء والنمو دون الحاجة لإعادة البناء من الصفر.">
+  <meta property="og:image" content="assets/profile-img.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="حسام صبري — مطور مواقع وأنظمة ويب متكاملة">
+  <meta name="twitter:description" content="مواقع وأنظمة ويب مخصصة صُممت لنمو الأعمال الحقيقي. سريعة، متجاوبة، وقابلة للتوسع.">
+  <meta name="twitter:image" content="assets/profile-img.jpeg">
+
+  <!-- Inline Brutalist SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230D0E11'/><rect x='10' y='10' width='80' height='80' fill='%23FFDE00'/><text x='50' y='68' font-family='monospace' font-weight='900' font-size='50' fill='%230D0E11' text-anchor='middle'>HS</text></svg>">
+
+  <!-- Google Fonts: Alexandria & Cairo (Arabic), Space Grotesk & Syne (English display), Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&family=Cairo:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link" data-i18n="skipLink">التخطي إلى المحتوى الرئيسي</a>
+
+  <!-- Top Announcement / Availability Ticker Bar -->
+  <aside class="top-status-bar" aria-label="Availability Status">
+    <div class="top-status-content">
+      <span class="status-indicator"><span class="status-dot"></span> <span data-i18n="topBar.status">متاح للمشاريع الجديدة وبناء الأنظمة المخصصة</span></span>
+      <span class="status-divider">///</span>
+      <span class="status-meta" data-i18n="topBar.architecture">هندسة وتطوير برمجيات الويب المتكاملة</span>
+      <span class="status-divider">///</span>
+      <span class="status-meta" data-i18n="topBar.outcomes">بدون مصطلحات معقدة — تركيز كامل على نتائج الأعمال</span>
+    </div>
+  </aside>
+
+  <!-- Global Brutalist Header / Streamlined Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Hossam Sabry Homepage">
+        <span class="brand-badge">HS</span>
+        <span class="brand-name">HOSSAM SABRY</span>
+      </a>
+
+      <!-- Streamlined Desktop Navigation (Only 3 essential links - zero clutter!) -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#services" class="nav-link" data-i18n="nav.services">الخدمات</a></li>
+          <!-- <li><a href="#projects" class="nav-link" data-i18n="nav.projects">المشاريع</a></li> -->
+          <li><a href="#why-me" class="nav-link" data-i18n="nav.whyMe">لماذا أنا؟</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: Language Switcher + Call to Action + Mobile Toggle -->
+      <div class="header-actions">
+        <!-- Language Switcher Button -->
+        <button class="lang-toggle-btn" id="lang-toggle-btn" aria-label="Switch Language">
+          <span class="lang-icon" aria-hidden="true">🌐</span>
+          <span class="lang-label" id="lang-label">EN</span>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm header-cta" id="header-cta">
+          <span data-i18n="nav.talk">تواصل معي</span>
+          <span class="btn-arrow" aria-hidden="true">↖</span>
+        </a>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Toggle Navigation Menu">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <span class="drawer-title" data-i18n="drawer.title">قائمة التنقل</span>
+      <button class="drawer-close" id="drawer-close" aria-label="Close Navigation">✕</button>
+    </div>
+
+    <!-- Language Toggle inside Mobile Drawer -->
+    <div class="drawer-lang-box">
+      <button class="drawer-lang-btn" id="drawer-lang-btn">
+        <span>🌐</span> <span id="drawer-lang-text">Switch to English (EN)</span>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="#services" class="mobile-nav-link" data-i18n="mobile.services">01 // الخدمات</a></li>
+      <!-- <li><a href="#projects" class="mobile-nav-link" data-i18n="mobile.projects">02 // المشاريع والأنظمة</a></li> -->
+      <li><a href="#why-me" class="mobile-nav-link" data-i18n="mobile.whyMe">03 // لماذا أعمل مع حسام؟</a></li>
+      <li><a href="#scalability" class="mobile-nav-link" data-i18n="mobile.scalability">04 // قابلية التوسع والنمو</a></li>
+      <li><a href="#approach" class="mobile-nav-link" data-i18n="mobile.approach">05 // خطوات العمل الـ 4</a></li>
+      <li><a href="#questions" class="mobile-nav-link" data-i18n="mobile.questions">06 // هل تحتاج إلى...</a></li>
+      <li><a href="#about" class="mobile-nav-link" data-i18n="mobile.about">07 // نبذة عن حسام</a></li>
+      <li><a href="#contact" class="mobile-nav-link" data-i18n="mobile.contact">08 // تواصل لبدء مشروعك</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <div class="drawer-status">
+        <span class="status-dot"></span> <span data-i18n="drawer.status">متاح لاستقبال المشاريع</span>
+      </div>
+      <a href="#contact" class="btn btn-primary btn-full drawer-cta">
+        <span data-i18n="hero.ctaPrimary">لنبدأ مشروعك الآن</span> <span class="btn-arrow">↖</span>
+      </a>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+
+  <main id="main-content">
+    <!-- ==================================================
+         HERO SECTION
+         ================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Text & Value Props -->
+        <div class="hero-content">
+          <div class="hero-meta-badge">
+            <span class="badge-tag" data-i18n="hero.badge">مطور مواقع وأنظمة ويب متكاملة</span>
+            <span class="badge-sub" data-i18n="hero.subBadge">أنظمة ويب مصممة لنمو الأعمال</span>
+          </div>
+
+          <h1 class="hero-headline">
+            <span data-i18n="hero.headlineLine1">أبني تجارب ويب</span> <br>
+            <span class="headline-highlight" data-i18n="hero.headlineHighlight">صُممت لتنمو مع أعمالك.</span>
+          </h1>
+
+          <p class="hero-subtext" data-i18n="hero.subtext">
+            أقوم ببناء مواقع احترافية وأنظمة ويب مخصصة للشركات والمشاريع التي تبحث عما هو أكثر من مجرد شكل جميل — أنظمة تعمل بسلاسة، تظهر بأعلى كفاءة على كل الشاشات، وجاهزة للنمو مع توسع عملك.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <span data-i18n="hero.ctaPrimary">لنبدأ مشروعك الآن</span>
+              <span class="btn-arrow" aria-hidden="true">↖</span>
+            </a>
+            <a href="#services" class="btn btn-outline btn-lg">
+              <span data-i18n="hero.ctaSecondary">استكشف ما يمكنني بناؤه</span>
+              <span class="btn-arrow" aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <!-- Hero Value Highlights Grid -->
+          <div class="hero-pillars-strip">
+            <div class="pillar-item">
+              <span class="pillar-icon">⚡</span>
+              <div class="pillar-info">
+                <strong data-i18n="hero.pillar1Title">سرعة وموثوقية فائقة</strong>
+                <small data-i18n="hero.pillar1Sub">تجربة تصفح سلسة وفورية لكل عميل</small>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-icon">📱</span>
+              <div class="pillar-info">
+                <strong data-i18n="hero.pillar2Title">متجاوب 100% مع الهواتف</strong>
+                <small data-i18n="hero.pillar2Sub">مبني بدقة للهواتف والأجهزة اللوحية والشاشات الكبيرة</small>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-icon">📈</span>
+              <div class="pillar-info">
+                <strong data-i18n="hero.pillar3Title">مبني لقابلية التوسع</strong>
+                <small data-i18n="hero.pillar3Sub">يتحمل تضاعف أعداد المستخدمين دون أي توقف</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Brutalist Photo Composition -->
+        <div class="hero-media-wrapper">
+          <div class="brutalist-card-frame">
+            <!-- Brutalist Badge Overlay Top -->
+            <div class="frame-tag-top">
+              <span class="frame-tag-id">HS-SYS // 01</span>
+              <span class="frame-tag-label" data-i18n="hero.frameTag">حسام صبري / مطور ويب</span>
+            </div>
+
+            <!-- Main Photo Container -->
+            <div class="photo-container">
+              <img 
+                src="assets/profile-img.jpeg" 
+                alt="حسام صبري — مطور مواقع وأنظمة ويب متكاملة"
+                class="hero-profile-img"
+                width="480"
+                height="560"
+                loading="eager"
+              >
+              <!-- Brutalist Crosshairs -->
+              <div class="crosshair crosshair-tl" aria-hidden="true">+</div>
+              <div class="crosshair crosshair-tr" aria-hidden="true">+</div>
+              <div class="crosshair crosshair-bl" aria-hidden="true">+</div>
+              <div class="crosshair crosshair-br" aria-hidden="true">+</div>
+            </div>
+
+            <!-- Attached Brutalist Label Block -->
+            <div class="frame-tag-bottom">
+              <div class="frame-tag-badge">
+                <span class="tag-pulse"></span>
+                <span data-i18n="hero.frameStatus">متاح للمشاريع والتعاقدات</span>
+              </div>
+              <div class="frame-tag-role">
+                <span data-i18n="hero.frameRole">هندسة برمجيات الويب المتكاملة</span>
+              </div>
+            </div>
+
+            <!-- Offset Brutalist Accent Shadow Card -->
+            <div class="frame-shadow-accent" aria-hidden="true"></div>
+          </div>
+
+          <!-- Floating Sticky Memo Pill -->
+          <div class="brutalist-sticker">
+            <span class="sticker-highlight" data-i18n="hero.stickerHighlight">بدون مصطلحات تقنية معقدة</span>
+            <span class="sticker-text" data-i18n="hero.stickerText">فقط نتائج حقيقية تعمل بكفاءة</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         MARQUEE BANNER TICKER
+         ================================================== -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track" id="marquee-track">
+        <!-- Rendered dynamically by JS or initial Arabic text -->
+        <span class="marquee-item">مواقع احترافية للشركات</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">أنظمة وتطبيقات ويب مخصصة</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">لوحات تحكم وإدارة العمليات</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">متاجر إلكترونية متكاملة</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">أنظمة التوظيف ومتابعة المتقدمين (ATS)</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">بوابات ومنصات الحجز</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">مهيأ لتحمل أكثر من 10,000 مستخدم</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">مواقع احترافية للشركات</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">أنظمة وتطبيقات ويب مخصصة</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">لوحات تحكم وإدارة العمليات</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">متاجر إلكترونية متكاملة</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">أنظمة التوظيف ومتابعة المتقدمين (ATS)</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">بوابات ومنصات الحجز</span>
+        <span class="marquee-star">✦</span>
+        <span class="marquee-item">مهيأ لتحمل أكثر من 10,000 مستخدم</span>
+        <span class="marquee-star">✦</span>
+      </div>
+    </div>
+
+    <!-- ==================================================
+         SECTION: DO YOU NEED... (Client Questions)
+         ================================================== -->
+    <section class="section section-questions" id="questions">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="questions.badge">حل المشكلات التشغيلية الحقيقية</div>
+          <h2 class="section-title" data-i18n="questions.title">هل تحتاج إلى...</h2>
+          <p class="section-intro" data-i18n="questions.intro">
+            كل عمل تجاري متنامٍ يصل إلى مرحلة تصبح فيها ملفات الإكسل أو القوالب الجاهزة عائقاً أمام التوسع. اختر الحالة التي تواجهك لتكتشف الحل المناسب:
+          </p>
+        </div>
+
+        <div class="questions-grid">
+          <!-- Question 1 -->
+          <div class="question-card" data-expanded="false">
+            <div class="question-header">
+              <span class="question-number">01</span>
+              <h3 class="question-title" data-i18n="questions.q1Title">موقع لشركتك يحقق مبيعات وتواصلات حقيقية؟</h3>
+              <button class="question-toggle-btn" aria-label="Toggle explanation">
+                <span class="toggle-icon">+</span>
+              </button>
+            </div>
+            <div class="question-body">
+              <p data-i18n="questions.q1Desc">
+                ليس مجرد واجهة عرض رقمية ثابتة بشعار شركتك، بل منصة تسويقية عالية التحويل مصممة خصيصاً لجذب عملائك المستهدفين، تفتح بسرعة فائقة على الهواتف وتحول الزوار إلى عملاء فعليين.
+              </p>
+              <div class="question-action">
+                <a href="#contact" class="btn btn-sm btn-dark" data-i18n="questions.q1Cta">أحتاج موقعاً لشركتي ↖</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="question-card" data-expanded="false">
+            <div class="question-header">
+              <span class="question-number">02</span>
+              <h3 class="question-title" data-i18n="questions.q2Title">نظام إداري مخصص بديل لملفات إكسل والعمل اليدوي؟</h3>
+              <button class="question-toggle-btn" aria-label="Toggle explanation">
+                <span class="toggle-icon">+</span>
+              </button>
+            </div>
+            <div class="question-body">
+              <p data-i18n="questions.q2Desc">
+                عندما يضيع فريقك ساعات طويلة في نسخ البيانات بين الجداول، والبحث عن الملفات، وتصحيح الأخطاء البشرية، فقد حان وقت الانتقال لنظام ويب مخصص. أبني لك أدوات رقمية تؤتمت عملياتك وتحافظ على بياناتك بدقة.
+              </p>
+              <div class="question-action">
+                <a href="#contact" class="btn btn-sm btn-dark" data-i18n="questions.q2Cta">أتمتة سير العمل لدي ↖</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="question-card" data-expanded="false">
+            <div class="question-header">
+              <span class="question-number">03</span>
+              <h3 class="question-title" data-i18n="questions.q3Title">منصة تتحمل زيادة المستخدمين والزوار دون أن تتوقف؟</h3>
+              <button class="question-toggle-btn" aria-label="Toggle explanation">
+                <span class="toggle-icon">+</span>
+              </button>
+            </div>
+            <div class="question-body">
+              <p data-i18n="questions.q3Desc">
+                لا يوجد أسوأ من إطلاق حملة تسويقية ناجحة لتفاجأ ببطء الموقع أو تعطله تماماً تحت الضغط. أقوم بهندسة الأنظمة بمعالجة المهام الخلفية، والتخزين المؤقت الذكي، وقواعد البيانات المصممة للتعامل مع آلاف الزوار بثقة.
+              </p>
+              <div class="question-action">
+                <a href="#scalability" class="btn btn-sm btn-dark" data-i18n="questions.q3Cta">شاهد كيف أهندس التوسع ↖</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="question-card" data-expanded="false">
+            <div class="question-header">
+              <span class="question-number">04</span>
+              <h3 class="question-title" data-i18n="questions.q4Title">موقع يعمل بسلاسة تامة وبدون أي عيوب على الهواتف؟</h3>
+              <button class="question-toggle-btn" aria-label="Toggle explanation">
+                <span class="toggle-icon">+</span>
+              </button>
+            </div>
+            <div class="question-body">
+              <p data-i18n="questions.q4Desc">
+                أكثر من 60% من عملائك يتصفحون عبر الهواتف الذكية. إذا كانت الأزرار صعبة النقر، أو النصوص متداخلة، أو النماذج معقدة، سيغادر العميل فوراً. أقوم باختبار وتطوير كل بكسل ليعمل بكفاءة على جميع مقاسات الهواتف.
+              </p>
+              <div class="question-action">
+                <a href="#contact" class="btn btn-sm btn-dark" data-i18n="questions.q4Cta">تحسين تجربة الهواتف لدي ↖</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="question-card" data-expanded="false">
+            <div class="question-header">
+              <span class="question-number">05</span>
+              <h3 class="question-title" data-i18n="questions.q5Title">لوحة تحكم مركزية لإدارة كل تفاصيل أعمالك؟</h3>
+              <button class="question-toggle-btn" aria-label="Toggle explanation">
+                <span class="toggle-icon">+</span>
+              </button>
+            </div>
+            <div class="question-body">
+              <p data-i18n="questions.q5Desc">
+                احصل على رؤية واضحة ومباشرة لعملياتك. أبني لوحات تحكم إدارية تتيح لأصحاب الأعمال متابعة نشاط العملاء، وتصدير التقارير بصيغة PDF وإكسل، وإدارة صلاحيات الموظفين من مكان واحد آمن.
+              </p>
+              <div class="question-action">
+                <a href="#contact" class="btn btn-sm btn-dark" data-i18n="questions.q5Cta">بناء لوحة تحكم وإدارة ↖</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="question-card" data-expanded="false">
+            <div class="question-header">
+              <span class="question-number">06</span>
+              <h3 class="question-title" data-i18n="questions.q6Title">نظام جديد مصمم بالكامل حول طبيعة عملك الفريدة؟</h3>
+              <button class="question-toggle-btn" aria-label="Toggle explanation">
+                <span class="toggle-icon">+</span>
+              </button>
+            </div>
+            <div class="question-body">
+              <p data-i18n="questions.q6Desc">
+                البرمجيات الجاهزة تجبرك على تغيير طريقة عملك لتناسبها. بينما النظام المخصص يُبنى ليتوافق مع قواعد عملك بدقة، ويرتبط مع بوابات الدفع والرسائل المفضلة لديك، ويكون ملكاً لك بنسبة 100%.
+              </p>
+              <div class="question-action">
+                <a href="#contact" class="btn btn-sm btn-dark" data-i18n="questions.q6Cta">ناقش مشروعك المخصص ↖</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SECTION: SERVICES — WHAT I CAN BUILD FOR YOU
+         ================================================== -->
+    <section class="section section-services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="services.badge">خدمات مصممة للشركات ورواد الأعمال</div>
+          <h2 class="section-title" data-i18n="services.title">ماذا يمكنني أن أبني لأعمالك؟</h2>
+          <p class="section-intro" data-i18n="services.intro">
+            كل حل يتم تصميمه وتطويره ليخدم أهدافك التجارية بدقة، ويوفر تجربة ممتازة لعملائك، ويكون قابلاً للصيانة والتطوير مستقبلاً.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 01 -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-index">01</span>
+              <span class="service-tag" data-i18n="services.s1Tag">جذب وبناء الثقة</span>
+            </div>
+            <h3 class="service-title" data-i18n="services.s1Title">مواقع الشركات والمشاريع</h3>
+            <p class="service-description" data-i18n="services.s1Desc">
+              مواقع احترافية مصممة خصيصاً لهوية شركتك، وعملائك، وأهدافك البيعية — وليست مجرد قالب جاهز تم لصق شعارك عليه.
+            </p>
+            <ul class="service-deliverables" id="service-1-list">
+              <li>تصميم متجاوب بالكامل مع شاشات الهواتف والأجهزة اللوحية</li>
+              <li>مهيأ لتحقيق سرعة تحميل قصوى وتصدر نتائج محركات البحث</li>
+              <li>مسارات واضحة تقود الزائر للتواصل وطلب الخدمة بسهولة</li>
+              <li>لوحة تحكم سهلة تتيح لك تعديل المحتوى بنفسك في أي وقت</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="#contact" class="btn btn-sm btn-accent" data-i18n="services.s1Cta">طلب موقع لشركتي ↖</a>
+            </div>
+          </article>
+
+          <!-- Service 02 -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-index">02</span>
+              <span class="service-tag" data-i18n="services.s2Tag">العمليات والأتمتة</span>
+            </div>
+            <h3 class="service-title" data-i18n="services.s2Title">تطبيقات وأنظمة ويب مخصصة</h3>
+            <p class="service-description" data-i18n="services.s2Desc">
+              أنظمة مبنية وفق طريقة عمل شركتك الفعلية — تشمل لوحات تحكم، وسير عمل مؤتمت، وحسابات للموظفين، وتقارير تفصيلية وأدوات إدارية.
+            </p>
+            <ul class="service-deliverables" id="service-2-list">
+              <li>نظام صلاحيات متقدم (مدراء، مشرفين، موظفين، عملاء)</li>
+              <li>لوحات تحكم ذكية تعرض مؤشرات الأداء والعمليات بشكل فوري</li>
+              <li>إنشاء المستندات والفواتير والتقارير تلقائياً بصيغة PDF</li>
+              <li>مزامنة البيانات بين الأقسام دون تكرار أو تأخير</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="#contact" class="btn btn-sm btn-accent" data-i18n="services.s2Cta">بناء نظام مخصص ↖</a>
+            </div>
+          </article>
+
+          <!-- Service 03 -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-index">03</span>
+              <span class="service-tag" data-i18n="services.s3Tag">المبيعات والتجارة</span>
+            </div>
+            <h3 class="service-title" data-i18n="services.s3Title">المتاجر الإلكترونية المتكاملة</h3>
+            <p class="service-description" data-i18n="services.s3Desc">
+              متاجر تمنح المتسوقين تجربة شراء سهلة وسريعة، وتمنحك أنت الأدوات الإدارية العملية لإدارة المنتجات والطلبات والمدفوعات والمخزون.
+            </p>
+            <ul class="service-deliverables" id="service-3-list">
+              <li>تصفح سلس للمنتجات، وفلاتر ذكية، وعملية دفع سريعة من خطوة واحدة</li>
+              <li>دعم خيارات الدفع عند الاستلام (COD) وبوابات الدفع الإلكتروني الآمنة</li>
+              <li>إدارة بسيطة للمخزون ومتابعة فورية لحالات الشحن والطلبات</li>
+              <li>إشعارات تلقائية للعميل عبر الرسائل أو البريد فور تأكيد الطلب</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="#contact" class="btn btn-sm btn-accent" data-i18n="services.s3Cta">إطلاق متجر إلكتروني ↖</a>
+            </div>
+          </article>
+
+          <!-- Service 04 -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-index">04</span>
+              <span class="service-tag" data-i18n="services.s4Tag">الحجوزات والخدمات</span>
+            </div>
+            <h3 class="service-title" data-i18n="services.s4Title">منصات وبوابات الحجز الإلكتروني</h3>
+            <p class="service-description" data-i18n="services.s4Desc">
+              منصات تسهل على عملائك حجز المواعيد، أو التسجيل في الخدمات، أو تقديم الطلبات والتواصل مع عملك دون الحاجة للمكالمات المتكررة.
+            </p>
+            <ul class="service-deliverables" id="service-4-list">
+              <li>تقويم تفاعلي للمواعيد المتاحة ونظام حجز فوري ومؤكد</li>
+              <li>إرسال تنبيهات وتأكيدات تلقائية للعملاء بمواعيدهم</li>
+              <li>نماذج استقبال بيانات العملاء مع إمكانية رفع المستندات والملفات</li>
+              <li>لوحة تنظيمية للإدارة تمنع تضارب المواعيد وتسهل الجدولة</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="#contact" class="btn btn-sm btn-accent" data-i18n="services.s4Cta">إنشاء منصة حجوزات ↖</a>
+            </div>
+          </article>
+
+          <!-- Service 05 -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-index">05</span>
+              <span class="service-tag" data-i18n="services.s5Tag">الموارد البشرية والإدارة</span>
+            </div>
+            <h3 class="service-title" data-i18n="services.s5Title">أنظمة التوظيف وإدارة العمليات (ATS)</h3>
+            <p class="service-description" data-i18n="services.s5Desc">
+              منصات مخصصة لمتابعة المتقدمين للوظائف، ومراحل الفرز، وإدارة مهام الموظفين، والتقارير التشغيلية وفقاً لسياسات شركتك الداخلية.
+            </p>
+            <ul class="service-deliverables" id="service-5-list">
+              <li>مسارات توظيف واضحة من لحظة تقديم السيرة الذاتية حتى التعيين</li>
+              <li>اختبارات تقييم واستبيانات إلكترونية تصحح تلقائياً</li>
+              <li>توزيع المهام بين فرق العمل وسجل تدقيق لمتابعة الإنجاز</li>
+              <li>قاعدة بيانات مركزية للباحثين عن عمل مع بحث وفلترة ذكية</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="#contact" class="btn btn-sm btn-accent" data-i18n="services.s5Cta">استكشاف أنظمة التوظيف ↖</a>
+            </div>
+          </article>
+
+          <!-- Service 06 -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-index">06</span>
+              <span class="service-tag" data-i18n="services.s6Tag">الفحص والتطوير</span>
+            </div>
+            <h3 class="service-title" data-i18n="services.s6Title">تطوير وتسريع المواقع القائمة</h3>
+            <p class="service-description" data-i18n="services.s6Desc">
+              هل تمتلك موقعاً أو نظاماً بالفعل؟ أستطيع فحص مشاكله البرمجية، وتسريع أدائه، وإصلاح توافقه مع الهواتف، وإضافة مزايا جديدة إليه.
+            </p>
+            <ul class="service-deliverables" id="service-6-list">
+              <li>تسريع أوقات التحميل واستجابة الخوادم للمواقع البطيئة</li>
+              <li>إصلاح التصاميم المكسورة على الهواتف الحديثة والأجهزة اللوحية</li>
+              <li>إضافة مزايا جديدة، وربط بوابات الدفع، والتكامل مع الخدمات الخارجية</li>
+              <li>إعادة هيكلة الأكواد الهشة لتسهيل تطويرها مستقبلاً بدون أعطال</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="#contact" class="btn btn-sm btn-accent" data-i18n="services.s6Cta">تطوير موقعي الحالي ↖</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SECTION: WHY WORK WITH ME (BUILT FOR REAL USERS)
+         ================================================== -->
+    <section class="section section-why" id="why-me">
+      <div class="container">
+        <div class="why-banner-box">
+          <div class="why-badge" data-i18n="whyMe.badge">الانضباط البرمجي وجودة التنفيذ</div>
+          <h2 class="why-main-heading">
+            <span data-i18n="whyMe.headingLine1">مبني لمستخدمين حقيقيين.</span><br>
+            <span class="text-stroke" data-i18n="whyMe.headingLine2">وليس لمجرد لقطة شاشة.</span>
+          </h2>
+          <p class="why-intro-text" data-i18n="whyMe.intro">
+            أي شخص يستطيع تصميم واجهة تبدو لطيفة على الورق. القيمة الحقيقية تظهر عندما يعمل الموقع على أرض الواقع ويتحمل ضعف الاتصال، وتنوع الأجهزة، وتدفق العملاء الفعليين دون أي خلل.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <!-- Pillar 1 -->
+          <div class="why-card">
+            <div class="why-card-header">
+              <span class="why-icon">📱</span>
+              <h3 class="why-title" data-i18n="whyMe.p1Title">متجاوب بالكامل</h3>
+            </div>
+            <p class="why-text" data-i18n="whyMe.p1Desc">
+              موقعك سيعمل بمظهر ممتاز وكفاءة تامة سواء فتح العميل من هاتف ذكي، أو تابلت، أو لابتوب، أو شاشة مكتبية ضخمة. يتم اختبار كل زر ونموذج بعناية.
+            </p>
+            <div class="why-tag" data-i18n="whyMe.p1Tag">بدون انزلاق أفقي • تخطيط مرن</div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="why-card">
+            <div class="why-card-header">
+              <span class="why-icon">📈</span>
+              <h3 class="why-title" data-i18n="whyMe.p2Title">قابل للنمو (Scalable)</h3>
+            </div>
+            <p class="why-text" data-i18n="whyMe.p2Desc">
+              نظامك سيكون جاهزاً لاستقبال أعداد مضاعفة من العملاء والطلبات مع نمو نشاطك، دون الحاجة لهدم الموقع والبدء من الصفر مجدداً.
+            </p>
+            <div class="why-tag" data-i18n="whyMe.p2Tag">بنية بيانات نظيفة • جاهز للتوسع</div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="why-card">
+            <div class="why-card-header">
+              <span class="why-icon">⚡</span>
+              <h3 class="why-title" data-i18n="whyMe.p3Title">سرعة وأداء فائق</h3>
+            </div>
+            <p class="why-text" data-i18n="whyMe.p3Desc">
+              الصفحات السريعة تصنع تجربة ممتعة للعميل وتمنحه الثقة. المواقع البطيئة تفقد الزوار وتنخفض في ترتيب جوجل؛ السرعة جزء لا يتجزأ من الكود.
+            </p>
+            <div class="why-tag" data-i18n="whyMe.p3Tag">أصول برمجية خفيفة • استجابة فورية</div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="why-card">
+            <div class="why-card-header">
+              <span class="why-icon">🛡️</span>
+              <h3 class="why-title" data-i18n="whyMe.p4Title">اعتمادية واستقرار</h3>
+            </div>
+            <p class="why-text" data-i18n="whyMe.p4Desc">
+              الأنظمة الأساسية لأي شركة يجب أن تُبنى لتستقر على المدى البعيد. معالجة الأخطاء الذكية والحفاظ على البيانات تمنحك راحة البال التامة.
+            </p>
+            <div class="why-tag" data-i18n="whyMe.p4Tag">سير عمل مستقر • استمرارية تشغيل عالية</div>
+          </div>
+
+          <!-- Pillar 5 -->
+          <div class="why-card">
+            <div class="why-card-header">
+              <span class="why-icon">🎯</span>
+              <h3 class="why-title" data-i18n="whyMe.p5Title">مبني خصيصاً لاحتياجك</h3>
+            </div>
+            <p class="why-text" data-i18n="whyMe.p5Desc">
+              طبيعة عملك فريدة ومميزة. يجب أن يُبنى نظامك ليخدم متطلباتك الفعلية بدلاً من محاولة إجبار موظفيك على التكيف مع قيود القوالب والبرامج العامة.
+            </p>
+            <div class="why-tag" data-i18n="whyMe.p5Tag">قواعدك الخاصة • ملكيتك الكاملة • بدون قيود</div>
+          </div>
+
+          <!-- Pillar 6 -->
+          <div class="why-card">
+            <div class="why-card-header">
+              <span class="why-icon">🔒</span>
+              <h3 class="why-title" data-i18n="whyMe.p6Title">أمان وحماية للبيانات</h3>
+            </div>
+            <p class="why-text" data-i18n="whyMe.p6Desc">
+              إدارة تسجيل الدخول، والصلاحيات الدقيقة، والتحقق من صحة المدخلات، وحماية البيانات تُوضع في الحسبان منذ اليوم الأول لحماية سجلات عملائك.
+            </p>
+            <div class="why-tag" data-i18n="whyMe.p6Tag">بيانات محمية • صلاحيات وصول صارمة</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SECTION: SCALABILITY SPOTLIGHT (10 TO 10,000 USERS)
+         ================================================== -->
+    <section class="section section-scalability" id="scalability">
+      <div class="container">
+        <div class="scalability-box">
+          <div class="scalability-header">
+            <span class="badge-tag" data-i18n="scalability.badge">عندما تتوسع أعمالك</span>
+            <h2 class="scalability-headline" data-i18n="scalability.title">
+              ماذا يحدث عندما يتحول 10 زوار إلى 10,000؟
+            </h2>
+            <p class="scalability-lead" id="scalability-lead">
+              يمكن لأي موقع أن يبدو جيداً مع 10 مستخدمين، لكنه قد ينهار بالكامل عند زيادة الإقبال وحملات الإعلانات.<br><br>أنا أقوم ببناء الأنظمة مع وضع النمو في الحسبان — بدءاً من هيكلة التطبيق وقواعد البيانات، وحتى طريقة التعامل مع الطلبات والمهام الثقيلة والمستخدمين المتزامنين.
+            </p>
+          </div>
+
+          <!-- Visual Comparison: The Fragile Site vs The Scalable System -->
+          <div class="comparison-grid">
+            <!-- Left: Typical Fragile Site -->
+            <div class="comparison-column fragile-column">
+              <div class="column-header">
+                <span class="column-indicator">✕</span>
+                <h3 data-i18n="scalability.fragileHeader">ماذا يحدث في المواقع الهشة والتقليدية؟</h3>
+              </div>
+              <ul class="comparison-list" id="fragile-list">
+                <li>
+                  <strong>تعطل وقت الضغط:</strong> يتجمد الخادم أو تظهر رسائل خطأ مزعجة بمجرد دخول عدد كبير من الزوار للشراء في وقت واحد.
+                </li>
+                <li>
+                  <strong>اختناق العمليات المباشرة:</strong> إرسال الإيميلات أو إنشاء الفواتير وإصدار التقارير يُبطئ الموقع بالكامل لأنها تُعالج في نفس مسار الزائر.
+                </li>
+                <li>
+                  <strong>بطء قواعد البيانات:</strong> مع تراكم سجلات العملاء والطلبات، تصبح عمليات البحث وجلب البيانات تستغرق ثوانٍ طويلة بدلاً من أجزاء الثانية.
+                </li>
+                <li>
+                  <strong>النتيجة المؤلمة:</strong> يغادر العميل محبطاً، وتضيع المبيعات والأرباح، وتضطر الشركة لإعادة بناء الموقع من نقطة الصفر.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right: Hossam's Scalable System -->
+            <div class="comparison-column robust-column">
+              <div class="column-header">
+                <span class="column-indicator">✓</span>
+                <h3 data-i18n="scalability.robustHeader">كيف أهندس الأنظمة لتتحمل النمو المستمر؟</h3>
+              </div>
+              <ul class="comparison-list" id="robust-list">
+                <li>
+                  <strong>إدارة متطورة للطلبات:</strong> توزيع ذكي لحمل الطلبات البرمجية يتيح للخدمة استقبال آلاف الزوار في نفس اللحظة بثبات تام.
+                </li>
+                <li>
+                  <strong>معالجة المهام في الخلفية (Queues):</strong> المهام الكبيرة مثل إرسال الإشعارات وتوليد ملفات PDF تتم في الخلفية دون تعطيل واجهة المستخدم.
+                </li>
+                <li>
+                  <strong>بنية بيانات مفهرسة ومحسنة:</strong> قواعد البيانات مفهرسة ومصممة هندسياً لتظل نتائج البحث والتقارير فورية حتى مع مئات آلاف السجلات.
+                </li>
+                <li>
+                  <strong>النتيجة لأعمالك:</strong> تطلق حملاتك التسويقية وتستقبل العملاء الجدد براحة واطمئنان تام بأن بنيتك البرمجية لن تخذلك.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="scalability-conclusion">
+            <div class="conclusion-quote" id="scalability-quote">
+              «أنا لا أبني مجرد شيء يعمل اليوم فقط..<br>
+              <strong>بل أفكر فيما سيحدث عندما يكبر مشروعك ويتوسع.</strong>»
+            </div>
+            <a href="#contact" class="btn btn-primary" data-i18n="scalability.cta">لنناقش متطلبات نظامك القابل للتوسع ↖</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================================================
+         SECTION: MY APPROACH
+         ================================================== -->
+    <section class="section section-approach" id="approach">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="approach.badge">منهجية عمل واضحة وشفافة</div>
+          <h2 class="section-title" data-i18n="approach.title">خطوات العمل الـ 4</h2>
+          <p class="section-intro" data-i18n="approach.intro">
+            بدون أي غموض أو مماطلة. إطار عمل منظم من أربع خطوات مصمم لتسليم مشاريع برمجية متقنة وعالية الجودة في موعدها المحدد وبدون مفاجآت.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+          <!-- Step 1 -->
+          <div class="approach-card">
+            <div class="step-badge" data-i18n="approach.step1Badge">الخطوة 01</div>
+            <h3 class="step-title" data-i18n="approach.step1Title">الفهم والتحليل</h3>
+            <p class="step-desc" data-i18n="approach.step1Desc">
+              أبدأ أولاً بفهم طبيعة عملك، وعملائك المستهدفين، وما يحتاجه النظام فعلياً لتحقيق أهدافك قبل كتابة سطر كود واحد.
+            </p>
+            <div class="step-deliverable" data-i18n="approach.step1Outcome">
+              النتيجة: تحديد دقيق لنطاق المشروع، وتوافق على الأهداف، وتفادي الهدر.
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="approach-card">
+            <div class="step-badge" data-i18n="approach.step2Badge">الخطوة 02</div>
+            <h3 class="step-title" data-i18n="approach.step2Title">التخطيط والهندسة</h3>
+            <p class="step-desc" data-i18n="approach.step2Desc">
+              أقوم بتحويل متطلبات العمل إلى هيكل برمجي واضح، وتخطيط لتدفق البيانات، وتصميم تجربة المستخدم قبل الدخول في البرمجة.
+            </p>
+            <div class="step-deliverable" data-i18n="approach.step2Outcome">
+              النتيجة: مخطط هندسي للنظام، وواجهات متجاوبة، وتدفق عمل مؤكد.
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="approach-card">
+            <div class="step-badge" data-i18n="approach.step3Badge">الخطوة 03</div>
+            <h3 class="step-title" data-i18n="approach.step3Title">البناء والتطوير</h3>
+            <p class="step-desc" data-i18n="approach.step3Desc">
+              أقوم ببرمجة النظام مع التركيز على السرعة، والتوافق مع الهواتف، واستقرار الأكواد، وقابلية الموقع للتوسع مستقبلاً.
+            </p>
+            <div class="step-deliverable" data-i18n="approach.step3Outcome">
+              النتيجة: نظام نظيف ومختبر وجاهز للعمل مع عملاء حقيقيين.
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="approach-card">
+            <div class="step-badge" data-i18n="approach.step4Badge">الخطوة 04</div>
+            <h3 class="step-title" data-i18n="approach.step4Title">الإطلاق والتطوير</h3>
+            <p class="step-desc" data-i18n="approach.step4Desc">
+              بعد الإطلاق الناجح، يستمر النظام في التطور والتكيف بسلاسة مع زيادة حجم أعمالك ومتطلباتك الجديدة.
+            </p>
+            <div class="step-deliverable" data-i18n="approach.step4Outcome">
+              النتيجة: تسليم كامل مع التوثيق، وقابلية مستمرة للنمو والتطوير.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SECTION: BEHIND THE SCENES (TECHNOLOGY)
+         ================================================== -->
+    <section class="section section-tech" id="technology">
+      <div class="container">
+        <div class="tech-box">
+          <div class="tech-header">
+            <span class="badge-tag" data-i18n="tech.badge">التقنيات المستخدمة</span>
+            <h2 class="tech-title" data-i18n="tech.title">خلف الكواليس</h2>
+            <p class="tech-sub" data-i18n="tech.sub">
+              أعتمد على تقنيات برمجية حديثة وموثوقة لبناء أنظمة قوية وقابلة للتوسع. لا تحتاج للقلق بشأن التفاصيل التقنية — ما يهمك حقاً هو الاستقرار والأمان والسرعة التي توفرها هذه الأدوات لعملك.
+            </p>
+          </div>
+
+          <div class="tech-tags-grid" id="tech-tags-grid">
+            <!-- Populated with Arabic default items -->
+            <div class="tech-tag-item">
+              <span class="tech-name">Laravel & PHP</span>
+              <small class="tech-desc">أعلى معايير الأمان، وهندسة البيانات، ومنطق الأعمال المتين</small>
+            </div>
+            <div class="tech-tag-item">
+              <span class="tech-name">Livewire & React</span>
+              <small class="tech-desc">تفاعل فوري وسلس للعميل دون الحاجة لإعادة تحميل الصفحات</small>
+            </div>
+            <div class="tech-tag-item">
+              <span class="tech-name">Modern JavaScript</span>
+              <small class="tech-desc">واجهات ديناميكية سلسة واستجابة فائقة السرعة على كل الشاشات</small>
+            </div>
+            <div class="tech-tag-item">
+              <span class="tech-name">MySQL Database</span>
+              <small class="tech-desc">تخزين بيانات آمن، ومنظم، وسريع للبحث في السجلات الكبيرة</small>
+            </div>
+            <div class="tech-tag-item">
+              <span class="tech-name">REST APIs</span>
+              <small class="tech-desc">تكامل كامل مع بوابات الدفع، ورسائل SMS، وخدمات الشحن</small>
+            </div>
+            <div class="tech-tag-item">
+              <span class="tech-name">Redis & Queues</span>
+              <small class="tech-desc">معالجة المهام الثقيلة في الخلفية حتى لا يتوقف موقعك أبداً</small>
+            </div>
+            <div class="tech-tag-item">
+              <span class="tech-name">Docker & Linux / VPS</span>
+              <small class="tech-desc">استضافة احترافية مستقرة وعمليات نشر آمنة ومضمونة</small>
+            </div>
+            <div class="tech-tag-item">
+              <span class="tech-name">Git & GitHub</span>
+              <small class="tech-desc">حفظ وتوثيق التحديثات مع إمكانية التراجع والتطوير الآمن</small>
+            </div>
+          </div>
+
+          <div class="tech-note" data-i18n="tech.note">
+            خلاصة مهمة لرواد الأعمال: التقنية مجرد وسيلة. الغاية الحقيقية هي بناء نظام عملي يوفر على شركتك الوقت، ويخدم عملاءك بسهولة، ولا ينهزم عندما تحتاج إليه.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SECTION: ABOUT ME
+         ================================================== -->
+    <section class="section section-about" id="about">
+      <div class="container">
+        <div class="about-card">
+          <div class="about-header">
+            <span class="badge-tag" data-i18n="about.badge">عن حسام صبري</span>
+            <h2 class="about-title" data-i18n="about.title">حلول ويب عملية مصممة لخدمة الأعمال.</h2>
+          </div>
+          
+          <div class="about-content">
+            <div class="about-main-text">
+              <p class="about-lead" data-i18n="about.lead">
+                أنا حسام، مطور مواقع وأنظمة ويب متكاملة (Full-Stack)، تركيزي ينصب على بناء حلول برمجية عملية وفعالة للشركات والمشاريع.
+              </p>
+              <p data-i18n="about.p1">
+                أعمل على تنفيذ كل ما تحتاجه الأعمال الرقمية: من المواقع التعريفية الاحترافية إلى الأنظمة والمنصات الإدارية المخصصة. قمت ببناء منصات تقييم وإرشاد مهني بمعادلات معقدة، وأنظمة لإدارة تفويج الحجاج تحت جداول زمنية دقيقة، ومتاجر إلكترونية، ومنصات حجوزات وسياحة.
+              </p>
+              <p data-i18n="about.p2">
+                هدفي ليس مجرد كتابة وتسليم أسطر برمجية؛ بل هو بناء أصل رقمي يعمل بكفاءة للأشخاص الذين يستخدمونه، ويخدم أهداف الشركة التي تديره، ويبقى قابلاً للتوسع عندما تنمو أعمالك.
+              </p>
+            </div>
+
+            <div class="about-sidebar">
+              <div class="about-stat-box">
+                <span class="about-stat-label" data-i18n="about.focusLabel">التركيز الأساسي</span>
+                <span class="about-stat-val" data-i18n="about.focusVal">منصات وأنظمة الويب للشركات</span>
+              </div>
+              <div class="about-stat-box">
+                <span class="about-stat-label" data-i18n="about.commLabel">أسلوب التواصل</span>
+                <span class="about-stat-val" data-i18n="about.commVal">واضح، مباشر، بدون تعقيدات</span>
+              </div>
+              <div class="about-stat-box">
+                <span class="about-stat-label" data-i18n="about.standardsLabel">المعايير المعتمدة</span>
+                <span class="about-stat-val" data-i18n="about.standardsVal">سرعة قصوى • أمان • أولوية للهاتف</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SECTION: CONTACT / CALL TO ACTION
+         ================================================== -->
+    <section class="section section-contact" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-header">
+            <span class="badge-tag" data-i18n="contact.badge">تواصل معي الآن</span>
+            <h2 class="contact-headline">
+              <span data-i18n="contact.headlineLine1">دعنا نبني معاً شيئاً</span> <br>
+              <span class="contact-highlight" data-i18n="contact.headlineHighlight">تنمو وتتوسع معه أعمالك.</span>
+            </h2>
+            <p class="contact-subtext" data-i18n="contact.subtext">
+              هل لديك فكرة مشروع جديد، أو موقع حالي يحتاج إلى تطوير وتحسين، أو عملية تجارية تحتاج إلى تحويلها إلى نظام إلكتروني منظم؟ تواصل معي اليوم ولنناقش كيف نحقق ذلك.
+            </p>
+          </div>
+
+          <div class="contact-layout">
+            <!-- Left: Direct Channels with Quick Copy -->
+            <div class="contact-channels">
+              <h3 class="channels-title" data-i18n="contact.channelsTitle">قنوات التواصل المباشرة</h3>
+              <p class="channels-desc" data-i18n="contact.channelsDesc">تفضل بالتواصل عبر الطريقة الأنسب لك. الروابط المباشرة جاهزة لتبدأ المحادثة فوراً.</p>
+
+              <!-- Email Item -->
+              <div class="channel-card">
+                <div class="channel-info">
+                  <span class="channel-type" data-i18n="contact.emailLabel">البريد الإلكتروني</span>
+                  <span class="channel-value" id="email-value">your-email@example.com</span>
+                </div>
+                <div class="channel-actions">
+                  <button class="btn btn-sm btn-outline copy-btn" data-copy="your-email@example.com" aria-label="Copy email address">
+                    <span class="copy-text" data-i18n="contact.copyBtn">نسخ</span>
+                  </button>
+                  <a href="mailto:your-email@example.com" class="btn btn-sm btn-dark" aria-label="Send email">
+                    <span data-i18n="contact.sendBtn">إرسال ↖</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- WhatsApp Item -->
+              <div class="channel-card">
+                <div class="channel-info">
+                  <span class="channel-type" data-i18n="contact.whatsappLabel">واتساب</span>
+                  <span class="channel-value" id="whatsapp-value">+1 234 567 890</span>
+                </div>
+                <div class="channel-actions">
+                  <button class="btn btn-sm btn-outline copy-btn" data-copy="+1234567890" aria-label="Copy WhatsApp number">
+                    <span class="copy-text" data-i18n="contact.copyBtn">نسخ</span>
+                  </button>
+                  <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark" aria-label="Open WhatsApp chat">
+                    <span data-i18n="contact.chatBtn">محادثة ↖</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- LinkedIn Item -->
+              <div class="channel-card">
+                <div class="channel-info">
+                  <span class="channel-type" data-i18n="contact.linkedinLabel">لينكد إن (LinkedIn)</span>
+                  <span class="channel-value">linkedin.com/in/your-profile</span>
+                </div>
+                <div class="channel-actions">
+                  <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark" aria-label="Open LinkedIn profile">
+                    <span data-i18n="contact.connectBtn">تواصل ↖</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- GitHub Item -->
+              <div class="channel-card">
+                <div class="channel-info">
+                  <span class="channel-type" data-i18n="contact.githubLabel">جيت هاب (GitHub)</span>
+                  <span class="channel-value">github.com/hossam20sabry</span>
+                </div>
+                <div class="channel-actions">
+                  <a href="https://github.com/hossam20sabry" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark" aria-label="Open GitHub profile">
+                    <span data-i18n="contact.profileBtn">الحساب ↖</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Availability Box -->
+              <div class="availability-card">
+                <div class="avail-title">
+                  <span class="status-dot"></span> <span data-i18n="contact.availTitle">حالة التوفر الحالية</span>
+                </div>
+                <p class="avail-text" data-i18n="contact.availText">
+                  مستعد حالياً لاستقبال مشاريع جديدة، وتطوير الأنظمة، وبناء المنصات المخصصة. يتم الرد عادةً خلال أقل من 24 ساعة.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Client Project Inquiry Form -->
+            <div class="contact-form-wrapper">
+              <h3 class="form-title" data-i18n="contact.formTitle">ابدأ محادثة حول مشروعك</h3>
+              <p class="form-desc" data-i18n="contact.formDesc">شاركني ملخصاً سريعاً لما ترغب في بنائه. سأقوم بدراسته والرد عليك بخطوات عمل واضحة.</p>
+
+              <form id="project-inquiry-form" class="brutalist-form" novalidate>
+                <div class="form-group">
+                  <label for="client-name" class="form-label" data-i18n="contact.nameLabel">اسمك أو اسم شركتك *</label>
+                  <input type="text" id="client-name" name="client_name" class="form-input" placeholder="مثال: عبد الله السعدي / شركة الأفق للخدمات" required>
+                  <span class="form-error" id="name-error" data-i18n="contact.errors.name">يرجى كتابة اسمك أو اسم شركتك.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="client-email" class="form-label" data-i18n="contact.emailFieldLabel">بريدك الإلكتروني *</label>
+                  <input type="email" id="client-email" name="client_email" class="form-input" placeholder="مثال: abdullah@example.com" required>
+                  <span class="form-error" id="email-error" data-i18n="contact.errors.email">يرجى كتابة بريد إلكتروني صحيح حتى أتمكن من الرد عليك.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="project-type" class="form-label" data-i18n="contact.projectTypeLabel">ما الذي تحتاج إلى بنائه؟ *</label>
+                  <select id="project-type" name="project_type" class="form-select" required>
+                    <option value="" disabled selected data-i18n="contact.projectTypePlaceholder">اختر نوع المشروع المطلوب...</option>
+                    <option value="business-website" data-i18n="contact.types.website">موقع تعريفي احترافي للشركة</option>
+                    <option value="custom-webapp" data-i18n="contact.types.webapp">نظام أو تطبيق ويب مخصص</option>
+                    <option value="dashboard-ats" data-i18n="contact.types.dashboard">لوحة تحكم إدارية / نظام توظيف ATS</option>
+                    <option value="ecommerce" data-i18n="contact.types.ecommerce">متجر إلكتروني متكامل</option>
+                    <option value="booking-platform" data-i18n="contact.types.booking">بوابة حجز أو تقديم خدمات</option>
+                    <option value="existing-improvement" data-i18n="contact.types.upgrade">تطوير وتحسين موقع أو نظام قائم</option>
+                    <option value="other" data-i18n="contact.types.other">أخرى / متطلبات خاصة</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="project-timeline" class="form-label" data-i18n="contact.timelineLabel">الوقت المقترح للإنجاز</label>
+                  <select id="project-timeline" name="project_timeline" class="form-select">
+                    <option value="asap" data-i18n="contact.timelines.asap">في أقرب وقت ممكن (عاجل)</option>
+                    <option value="1-month" selected data-i18n="contact.timelines.month">خلال شهر واحد</option>
+                    <option value="1-3-months" data-i18n="contact.timelines.months">من شهر إلى 3 أشهر</option>
+                    <option value="exploring" data-i18n="contact.timelines.exploring">استكشاف الخيارات والتكاليف فقط</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="project-details" class="form-label" data-i18n="contact.detailsLabel">أخبرني بالمزيد عن مشروعك *</label>
+                  <textarea id="project-details" name="project_details" rows="4" class="form-textarea" placeholder="ما طبيعة نشاطك التجاري؟ ما المشاكل التي تبحث عن حل لها؟ أو ما هي المزايا والوظائف المحددة التي تحتاجها في النظام؟" required></textarea>
+                  <span class="form-error" id="details-error" data-i18n="contact.errors.details">يرجى كتابة نبذة مختصرة عن متطلبات المشروع.</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full btn-lg" id="submit-btn">
+                  <span data-i18n="contact.submitBtn">إرسال تفاصيل المشروع</span>
+                  <span class="btn-arrow" aria-hidden="true">↖</span>
+                </button>
+
+                <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================================================
+       GLOBAL FOOTER
+       ================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-col">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="brand-badge">HS</span>
+          <span class="brand-name">HOSSAM SABRY</span>
+        </a>
+        <p class="footer-tagline" data-i18n="footer.tagline">
+          مطور مواقع وأنظمة ويب متكاملة، أبني منصات وأنظمة رقمية تساعد الشركات على العمل بكفاءة وخدمة المزيد من العملاء والنمو المستمر.
+        </p>
+        <div class="footer-status-indicator">
+          <span class="status-dot"></span> <span data-i18n="footer.status">متاح لاستقبال مشاريع الشركات</span>
+        </div>
+      </div>
+
+      <div class="footer-nav-col">
+        <span class="footer-heading" data-i18n="footer.navHeading">أقسام الصفحة</span>
+        <ul class="footer-links">
+          <li><a href="#services" data-i18n="nav.services">الخدمات</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">المشاريع</a></li>
+          <li><a href="#why-me" data-i18n="nav.whyMe">لماذا أنا؟</a></li>
+          <li><a href="#scalability" data-i18n="nav.scalability">قابلية التوسع</a></li>
+          <li><a href="#approach" data-i18n="nav.approach">خطوات العمل</a></li>
+          <li><a href="#questions" data-i18n="nav.questions">هل تحتاج إلى...</a></li>
+          <li><a href="#about" data-i18n="nav.about">عن حسام</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">تواصل معي</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-col">
+        <span class="footer-heading" data-i18n="footer.contactHeading">التواصل والروابط</span>
+        <ul class="footer-links">
+          <li><a href="mailto:your-email@example.com">البريد: your-email@example.com</a></li>
+          <li><a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">واتساب: +1 234 567 890</a></li>
+          <li><a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">حساب لينكد إن (LinkedIn)</a></li>
+          <li><a href="https://github.com/hossam20sabry" target="_blank" rel="noopener noreferrer">حساب جيت هاب (GitHub)</a></li>
+        </ul>
+        <div class="footer-top-btn-wrap">
+          <a href="#site-header" class="btn btn-sm btn-outline back-to-top">
+            <span data-i18n="footer.backToTop">العودة للأعلى ↑</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-flex">
+        <span id="footer-copy">جميع الحقوق محفوظة © 2026 حسام صبري. صُمم لتحقيق نتائج أعمال حقيقية.</span>
+        <span class="footer-tech-stamp" data-i18n="footer.techBadge">HTML خالص • CSS حديث • Vanilla JS بدون مكتبات</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
